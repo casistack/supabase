@@ -171,7 +171,7 @@ services:
       - POSTGRES_BACKEND_SCHEMA=${ANALYTICS_DB_SCHEMA:-_analytics}
       - LOGFLARE_FEATURE_FLAG_OVERRIDE=${LOGFLARE_FEATURE_FLAG_OVERRIDE:-multibackend=true}
     ports:
-      - "${ANALYTICS_PORT:-4000}:4000"
+      - "${ANALYTICS_PORT:-4141}:4000"
     healthcheck:
       test: ["CMD", "curl", "http://localhost:4000/health"]
       interval: 5s
